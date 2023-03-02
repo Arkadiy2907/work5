@@ -16,6 +16,7 @@ $violet: rgb(102, 102, 204);
   background-color: $white;
   min-height: 100vh;
   padding-top: 2rem;
+  font-family: "Roboto", sans-serif;
 
   .logo {
     padding: 5px;
@@ -61,6 +62,7 @@ $violet: rgb(102, 102, 204);
   min-height: 100vh;
   padding: 1.5rem 2rem;
   color: $lightGrey;
+  font-family: "Roboto", sans-serif;
 
   .header {
     display: flex;
@@ -131,11 +133,14 @@ $violet: rgb(102, 102, 204);
       width: 100%;
       margin-bottom: 0;
 
-      tr {
+      .table__head {
         width: 100%;
+        font-size: 0.8rem;
+        color: $lightGrey;
 
         th {
           border: 0;
+
           &:nth-child(1) {
             width: 10%;
           }
@@ -154,12 +159,14 @@ $violet: rgb(102, 102, 204);
         tr {
           border-bottom: 1px solid rgb(203, 203, 203);
 
+          th,
           td {
             padding: 1rem 0.5rem;
             color: $lightGrey;
             font-size: 0.8rem;
             vertical-align: middle;
             border: 0;
+            font-weight: normal;
 
             address {
               margin-bottom: 0;

@@ -3,6 +3,7 @@
   background-color: rgb(255, 255, 255);
   min-height: 100vh;
   padding-top: 2rem;
+  font-family: "Roboto", sans-serif;
 }
 .aside .logo {
   padding: 5px;
@@ -33,6 +34,7 @@
   min-height: 100vh;
   padding: 1.5rem 2rem;
   color: #7d7d7d;
+  font-family: "Roboto", sans-serif;
 }
 .main .header {
   display: flex;
@@ -93,34 +95,40 @@
   width: 100%;
   margin-bottom: 0;
 }
-.main .table__wrap .table tr {
+.main .table__wrap .table .table__head {
   width: 100%;
+  font-size: 0.8rem;
+  color: #7d7d7d;
 }
-.main .table__wrap .table tr th {
+.main .table__wrap .table .table__head th {
   border: 0;
 }
-.main .table__wrap .table tr th:nth-child(1) {
+.main .table__wrap .table .table__head th:nth-child(1) {
   width: 10%;
 }
-.main .table__wrap .table tr th:nth-child(2) {
+.main .table__wrap .table .table__head th:nth-child(2) {
   width: 30%;
 }
-.main .table__wrap .table tr th:nth-child(3) {
+.main .table__wrap .table .table__head th:nth-child(3) {
   width: 30%;
 }
 .main .table__wrap .table .tbody tr {
   border-bottom: 1px solid rgb(203, 203, 203);
 }
+.main .table__wrap .table .tbody tr th,
 .main .table__wrap .table .tbody tr td {
   padding: 1rem 0.5rem;
   color: #7d7d7d;
   font-size: 0.8rem;
   vertical-align: middle;
   border: 0;
+  font-weight: normal;
 }
+.main .table__wrap .table .tbody tr th address,
 .main .table__wrap .table .tbody tr td address {
   margin-bottom: 0;
 }
+.main .table__wrap .table .tbody tr th address a,
 .main .table__wrap .table .tbody tr td address a {
   color: #7d7d7d;
   text-decoration: none;
