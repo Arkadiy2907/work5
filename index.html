@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Верстка при помощи Bootstrap</title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row align-items-start">
+			<aside class="col-md-2 col-sm-12 aside">
+				<div class="logo">
+					<img src="./assets/Logo Work5.svg" alt="логотип">
+				</div>
+				<ul class="nav flex-column primary__nav">
+					<li class="nav-item"><a class="nav-link" href="#"><img src="./assets/дом.svg" alt="дом">Главная</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#"><img src="./assets/тележка.svg" alt="дом">Мои
+							магазины</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#"><img src="./assets/мегафон.svg" alt="дом">Промоматериалы</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#"><img src="./assets/диаграмма.svg" alt="дом">Статистика</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#"><img src="./assets/кошелек.svg" alt="дом">Баланс</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><img src="./assets/аватар.svg" alt="дом">Персональные
+							данные</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><img src="./assets/вопрос.svg" alt="дом">FAQ</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><img src="./assets/гарнитура.svg" alt="дом">Техподдержка</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#"><img src="./assets/выход.svg" alt="дом">Выход</a></li>
+				</ul>
+			</aside>
+			<main class="col-md-10 col-sm-12 main">
+				<header class="header">
+					<ul class="nav secondary__nav">
+						<li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
+						<li class="nav-item">&nbsp;<span>&gt;</span>&nbsp;</li>
+						<li class="nav-item"><a class="nav-link" href="#">Мои магазины</a></li>
+					</ul>
+					<div class="header__user">
+						<div class="messege">
+							<img src="./assets/messege.svg" alt="сообщение">
+						</div>
+						<div class="avatar">
+							<svg width="50" height="50" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<pattern id="img" patternUnits="userSpaceOnUse" width="100%" height="100%">
+										<image xlink:href="./assets/фото.svg" width="100%" height="100%" />
+									</pattern>
+								</defs>
+								<circle cx="50%" cy="50%" r="90" fill="none" stroke="#F2F2F2" stroke-width="10" />
+								<circle cx="50%" cy="50%" r="90" fill="url(#img)" />
+							</svg>
+							<p>Максим Добжанский</p>
+						</div>
+					</div>
+				</header>
+				<button type="button" class="btn btn-primary btn__modal" data-bs-toggle="modal" data-bs-target="#myModal">
+					<img class="pic__close" src="./assets/+.svg" alt="плюс">
+					Создать свой магазин
+				</button>
+				<h4 class="text-start mb-4">Управление магазинами</h4>
+				<div class="table__wrap table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">№</th>
+								<th scope="col">Название</th>
+								<th scope="col">Адрес</th>
+								<th scope="col">Действие</th>
+							</tr>
+						</thead>
+						<tbody class="tbody">
+							<tr>
+								<td scope="row">12345</td>
+								<td>Дипломная работа</td>
+								<td>
+									<address>
+										<a href="#">http://www.work5.ru/services</a>
+									</address>
+								</td>
+								<td>
+									<button type="button" class="btn btn-primary btn__green">
+										<img src="./assets/карандаш.svg" alt="карандаш">
+										Редактировать
+									</button>
+									<button type="button" class="btn btn-primary btn__gray">
+										<img src="./assets/cansel.svg" alt="cansel">
+										Редактировать
+									</button>
+								</td>
+							</tr>
+							<tr class="last">
+								<td scope="row">12345</td>
+								<td>Дипломная работа</td>
+								<td>
+									<address>
+										<a href="#">http://www.work5.ru/services</a>
+									</address>
+								</td>
+								<td>
+									<button type="button" class="btn btn-primary btn__green">
+										<img src="./assets/карандаш.svg" alt="карандаш">
+										Редактировать
+									</button>
+									<button type="button" class="btn btn-primary btn__gray">
+										<img src="./assets/cansel.svg" alt="cansel">
+										Редактировать
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</main>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Создать магазин</h5>
+					<button type="button" class="closeModal" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<section class="form__section select">
+							<div class="select__item mr-2">
+								<label for="select" class="form-label"><strong>Шаблон</strong></label>
+								<select id="select" class="form-select">
+									<option>Стандартный</option>
+								</select>
+							</div>
+							<div class="select__item">
+								<label for="select2" class="form-label"><strong>Цветовая схема</strong></label>
+								<select id="select2" class="form-select">
+									<option>Классическая</option>
+								</select>
+							</div>
+						</section>
+						<section class="form__section input">
+							<div class="input__item">
+								<label for="disabledTextInput" class="form-label mb-1"><strong>Домен</strong></label>
+								<input type="text" id="disabledTextInput" class="input__el" placeholder="Например: ivangrozniy">
+							</div>
+							<input class="btn btn-primary input__item" type="button" value=".work5.ru">
+						</section>
+						<section class="form__section text">
+							<img src="./assets/warning.svg" alt="cansel">
+							<p>В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После
+								создания магазина Вы
+								сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по <a href="#">ссылке</a></p>
+						</section>
+						<section class="form__button">
+							<button class="btn btn-primary" type="reset">Отмена</button>
+							<button type="submit" class="btn btn-primary">Создать</button>
+						</section>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script defer src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
